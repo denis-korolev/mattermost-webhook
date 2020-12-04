@@ -1,8 +1,13 @@
 {
     "name": "denis-korolev/mattermost-webhook",
-    "description": "Library to working with Webhook Mattermost",
+    "description": "Library to send messages with Mattermost Webhook",
     "type": "library",
     "license": "MIT",
+    "authors": [{
+        "name": "Denis KOrolev",
+        "email": "dinya17@gmail.com",
+        "role": "Developer"
+    }],
     "config": {
         "process-timeout": 0,
         "sort-packages": true
