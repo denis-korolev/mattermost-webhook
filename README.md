@@ -1,8 +1,22 @@
 ![Test status on master](https://github.com/denis-korolev/mattermost-webhook/workflows/Master%20status/badge.svg)
-### Client to work with Cargomart webhook
+
+Client to work with Cargomart webhook
+----------------------------------------
 
 This library will help you send messages to Mattermost by Webhook.
+
+Installation / Usage
+--------------------
+
+Install the latest version via [composer](https://getcomposer.org/):
+
+```bash
+composer require denis-korolev/mattermost-webhook
+```
+
 Here is an example of usage. 
+--------------------
+
 ```php
         use App\Mattermost\Attachment;
         use App\Mattermost\Message;
