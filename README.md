@@ -1,7 +1,8 @@
+![Test status on master](https://github.com/denis-korolev/mattermost-webhook/workflows/.github/workflows/php.yml/badge.svg)
+
 # Client to work with Cargomart webhook
 
 ```php
-        
         use App\Mattermost\Attachment;
         use App\Mattermost\Message;
         use App\Mattermost\WebhookClient;
@@ -25,3 +26,12 @@
         // or
         $client->batchSend([$message]);
 ```
+
+If you need to send huge text, more than 4000 symbols, you can use 
+```php 
+    $messages = MessageHelper::createMessagesWithTextAttachments('huge text, longer 4000 symbols');
+    $client->batchSend(...$messages);
+```
+It will create Message[], which you can send.
+It will break text by pages and qoute it by \```
+So you just send it and it will print at chat one after another. 
