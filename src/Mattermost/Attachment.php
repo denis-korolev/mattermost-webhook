@@ -5,12 +5,14 @@ namespace App\Mattermost;
 final class Attachment
 {
     /**
-     * A required plain-text summary of the post. This is used in notifications, and in clients that don’t support formatted text (eg IRC).
+     * A required plain-text summary of the post. This is used in notifications, and in clients that don’t support
+     * formatted text (eg IRC).
      */
     private string $fallback = '';
 
     /**
-     * A hex color code that will be used as the left border color for the attachment. If not specified, it will default to match the left hand sidebar header background color.
+     * A hex color code that will be used as the left border color for the attachment.
+     * If not specified, it will default to match the left hand sidebar header background color.
      */
     private string $color = '';
 
@@ -21,7 +23,8 @@ final class Attachment
 
     /**
      * The text to be included in the attachment. It can be formatted using markdown.
-     * If it includes more than 700 characters or more than 5 line breaks, the message will be collapsed and a “Show More” link will be added to expand the message.
+     * If it includes more than 700 characters or more than 5 line breaks, the message will be collapsed and
+     * a “Show More” link will be added to expand the message.
      */
     private string $text = '';
 
@@ -51,19 +54,23 @@ final class Attachment
     private string $titleLink = '';
 
     /**
-     * Fields can be included as an optional array within attachments, and are used to display information in a table format inside the attachment.
+     * Fields can be included as an optional array within attachments, and are used to display information in a table
+     * format inside the attachment.
      */
     private array $fields = [];
 
     /**
      * An optional URL to an image file (GIF, JPEG, PNG, or BMP) that will be displayed inside a message attachment.
-     * Large images will be resized to a maximum width of 400px or a maximum height of 300px, while still maintaining the original aspect ratio.
+     * Large images will be resized to a maximum width of 400px or a maximum height of 300px, while still maintaining
+     * the original aspect ratio.
      */
     private string $imageUrl = '';
 
     /**
-     * An optional URL to an image file (GIF, JPEG, PNG, or BMP) that will be displayed as a 75x75 pixel thumbnail on the right side of an attachment.
-     * We recommend using an image that is already 75x75 pixels, but larger images will be scaled down with the aspect ratio maintained.
+     * An optional URL to an image file (GIF, JPEG, PNG, or BMP) that will be displayed as a 75x75 pixel thumbnail on
+     * the right side of an attachment.
+     * We recommend using an image that is already 75x75 pixels, but larger images will be scaled down with the aspect
+     * ratio maintained.
      */
     private string $thumbUrl = '';
 
@@ -175,7 +182,8 @@ final class Attachment
      *
      * @param string $title A title shown in the table above the value.
      * @param string $value The text value of the field. It can be formatted using markdown.
-     * @param bool $short Optionally set to “True” or “False” to indicate whether the value is short enough to be displayed beside other values.
+     * @param bool $short Optionally set to “True” or “False” to indicate whether the value is short enough to be displayed
+     * beside other values.
      * @return $this
      */
     public function addField(string $title, string $value, $short = true): self

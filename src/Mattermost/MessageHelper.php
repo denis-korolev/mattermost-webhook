@@ -18,8 +18,11 @@ class MessageHelper
      *
      * @return Message[]
      */
-    public static function createMessagesWithTextAttachments(string $attachmentText, string $attachmentTitle = '', string $messageText = ''): array
-    {
+    public static function createMessagesWithTextAttachments(
+        string $attachmentText,
+        string $attachmentTitle = '',
+        string $messageText = ''
+    ): array {
         $messages = [];
 
         $page = 1;
