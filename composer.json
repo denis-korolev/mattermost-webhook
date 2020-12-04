@@ -2,6 +2,7 @@
     "name": "denis-korolev/mattermost-webhook",
     "description": "Library to working with Webhook Mattermost",
     "type": "library",
+    "license": "MIT",
     "config": {
         "process-timeout": 0,
         "sort-packages": true
