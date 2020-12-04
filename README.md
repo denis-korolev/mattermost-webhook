@@ -1,6 +1,6 @@
 ![Test status on master](https://github.com/denis-korolev/mattermost-webhook/workflows/Master%20status/badge.svg)
 
-Client to work with Cargomart webhook
+Client to work with Matermost webhook
 ----------------------------------------
 
 This library will help you send messages to Mattermost by Webhook.
